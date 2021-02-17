@@ -209,6 +209,14 @@ Resources:
               env: !Ref env,
             }
 
+        PreTokenGeneration: !Sub
+          - arn:aws:lambda:${region}:${account}:function:customTokenGeneration-${env}
+          - {
+              region: !Ref 'AWS::Region',
+              account: !Ref 'AWS::AccountId',
+              env: !Ref env,
+            }
+
       UsernameConfiguration:
         CaseSensitive: false
       
