@@ -1,0 +1,20 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-prostylee-dev-211437-authRole",
+      "UnauthRoleArn": "arn:aws:iam::911712091035:role/amplify-prostylee-dev-211437-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::911712091035:role/amplify-prostylee-dev-211437-authRole",
+      "Region": "ap-southeast-1",
+      "DeploymentBucketName": "amplify-prostylee-dev-211437-deployment",
+      "UnauthRoleName": "amplify-prostylee-dev-211437-unauthRole",
+      "StackName": "amplify-prostylee-dev-211437",
+      "StackId": "arn:aws:cloudformation:ap-southeast-1:911712091035:stack/amplify-prostylee-dev-211437/fae8ef20-6ece-11eb-a97d-0288a276c75c",
+      "AmplifyAppId": "dnchyfaq79i0s"
+    },
+    "categories": {
+      "auth": {
+        "prostyleeddf57d06": {}
+      }
+    }
+  }
+}
