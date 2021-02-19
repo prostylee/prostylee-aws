@@ -1,0 +1,11 @@
+{
+  "AppSyncApiName": "prostylee",
+  "DynamoDBBillingMode": "PAY_PER_REQUEST",
+  "DynamoDBEnableServerSideEncryption": false,
+  "AuthCognitoUserPoolId": {
+    "Fn::GetAtt": [
+      "authprostyleeddf57d06",
+      "Outputs.UserPoolId"
+    ]
+  }
+}

@@ -1,0 +1,12 @@
+type Comment @model @key(name: "ByParent", fields: ["parentId"]) {
+   id: ID!
+   commentOwnerId: String!
+   commentOwnerUsername: String!
+   targetId: String!
+   targetType: String!
+   content: String!
+   createdAt: AWSDateTime!
+   parentId: ID
+   parent: Comment @connection(fields: ["parentId"])
+   childrens: [Comment] @connection(keyName: "ByParent", fields: ["id"])
+}
