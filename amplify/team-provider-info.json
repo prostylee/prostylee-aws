@@ -13,7 +13,8 @@
     },
     "categories": {
       "auth": {
-        "prostyleeddf57d06": {}
+        "prostyleeddf57d06": {},
+        "userPoolGroups": {}
       }
     }
   }

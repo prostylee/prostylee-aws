@@ -1,12 +1,17 @@
-type Comment @model @key(name: "ByParent", fields: ["parentId"]) {
+type Comment @model @auth(
+    rules: [
+      { allow: owner, operations: [create, delete, update] }
+    ]) 
+    @key(name: "ByParent", fields: ["parentId"]) {
    id: ID!
-   commentOwnerId: String!
-   commentOwnerUsername: String!
+   ownerId: String!
+   owner: String!
    targetId: String!
    targetType: String!
    content: String!
+   numberOfLikes: Int
    createdAt: AWSDateTime!
-   parentId: ID
+   parentId: ID!
    parent: Comment @connection(fields: ["parentId"])
    childrens: [Comment] @connection(keyName: "ByParent", fields: ["id"])
 }
