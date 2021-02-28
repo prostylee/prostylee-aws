@@ -1,0 +1,17 @@
+{
+    "groupPermissionMap": {
+        "BUYER": [
+            "create/update",
+            "read"
+        ],
+        "STOREOWNER": [
+            "create/update",
+            "read"
+        ],
+        "SUPERADMIN": [
+            "create/update",
+            "read",
+            "delete"
+        ]
+    }
+}
