@@ -8,3 +8,8 @@ amplify remove auth
 
 amplify push
 amplify push --force
+
+
+
+#image service handler
+template file : AWS CloudFormation
