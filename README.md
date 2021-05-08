@@ -3,13 +3,18 @@ For setup AWS Infrastructure as Code
 
 
 > amplify add auth
+
 > amplify update auth
+
 > amplify remove auth
 
+
 > amplify push
+
 > amplify push --force
 
 
 
-#image service handler
-template file : AWS CloudFormation
+# Image service handler
+
+Template file : AWS CloudFormation
