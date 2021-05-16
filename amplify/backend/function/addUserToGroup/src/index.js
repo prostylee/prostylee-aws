@@ -31,8 +31,28 @@ function signUpUserWithBackend(event, context, callback) {
   axios
     .post('http://52.77.35.71:8090/api/v1/oauth/sign-up', req)
     .then((res) => {
-      console.log(`statusCode: ${res.statusCode}`)
+      console.log(`statusCode: ${res.status}`)
       console.log(res);
+      console.log('UserID: ' + res.data.data.id);
+      const customAttributes =  {
+        UserAttributes: [
+          {
+            Name: "custom:userId",
+            Value: "" + res.data.data.id
+          }
+          // {
+          //   Name: "custom:storeId",
+          //   Value: "" + res.data.storeId
+          // }
+        ],
+        UserPoolId: event.userPoolId,
+        Username: event.userName
+      };
+      cognitoISP.adminUpdateUserAttributes(customAttributes, function(err, data) {
+        if (err) {
+          console.log(err);
+        }
+      });
     })
     .catch((error) => {
       console.error(error)

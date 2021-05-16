@@ -68,8 +68,8 @@
         "Layers": [],
         "Timeout": "25",
         "Code": {
-          "S3Bucket": "amplify-prostylee-dev-211437-deployment",
-          "S3Key": "amplify-builds/addUserToGroup-45494b6c2b31794b6f68-build.zip"
+          "S3Bucket": "amplify-prostylee-staging-224241-deployment",
+          "S3Key": "amplify-builds/addUserToGroup-6a5362673341482b4c4c-build.zip"
         }
       }
     },

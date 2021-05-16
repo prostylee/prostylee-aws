@@ -226,7 +226,19 @@ Resources:
           Name: email
           Required: true
           Mutable: true
-        
+
+        ### https://awscli.amazonaws.com/v2/documentation/api/latest/reference/cognito-idp/add-custom-attributes.html
+        - 
+          Name: userId
+          Required: false
+          Mutable: true
+          AttributeDataType: String
+
+        - 
+          Name: orderId
+          Required: false
+          Mutable: true
+          AttributeDataType: String
       
       
       
