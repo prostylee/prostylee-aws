@@ -1,17 +1,51 @@
 type Comment @model @auth(
     rules: [
       { allow: owner, operations: [create, delete, update] }
-    ]) 
+      { allow: private, operations: [read, update] }
+    ])
     @key(name: "ByParent", fields: ["parentId"]) {
    id: ID!
    ownerId: String!
    owner: String!
+   ownerFullname: String!
    targetId: String!
    targetType: String!
    content: String!
    numberOfLikes: Int
+   userIdLikes: [String!]
    createdAt: AWSDateTime!
    parentId: ID!
    parent: Comment @connection(fields: ["parentId"])
-   childrens: [Comment] @connection(keyName: "ByParent", fields: ["id"])
+   childrens: [Comment] @connection(keyName: "ByParent", fields: ["id"], name: "SortedComments", sortField: "createdAt")
+}
+
+type Chat @model @auth(
+    rules: [
+      { allow: owner, operations: [create, delete, update] }
+      { allow: private, operations: [read, update] }
+    ])
+    @key(name: "ByParent", fields: ["parentId"]) {
+   id: ID!
+   ownerId: String!
+   owner: String!
+   ownerFullname: String!
+   content: String!
+   participantUserIds: [String!]
+   imageUrls: [String!]
+   createdAt: AWSDateTime!
+   parentId: ID!
+   parent: Chat @connection(fields: ["parentId"])
+   childrens: [Chat] @connection(keyName: "ByParent", fields: ["id"], name: "SortedChats", sortField: "createdAt")
+}
+
+type Mutation {
+  # Add all the custom mutations here
+  likeComment(id: ID!, userId: String!): Comment
+	unlikeComment(id: ID!, userId: String!): Comment
+}
+
+type Subscription {
+  # Add all the custom subscription here
+  onLikeComment: Comment @aws_subscribe(mutations: ["likeComment"])
+  onUnlikeComment: Comment @aws_subscribe(mutations: ["unlikeComment"])
 }
