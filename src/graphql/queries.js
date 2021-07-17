@@ -15,6 +15,7 @@ export const getComment = /* GraphQL */ `
       userIdLikes
       createdAt
       parentId
+      updatedAt
       parent {
         id
         ownerId
@@ -27,6 +28,7 @@ export const getComment = /* GraphQL */ `
         userIdLikes
         createdAt
         parentId
+        updatedAt
         parent {
           id
           ownerId
@@ -44,7 +46,6 @@ export const getComment = /* GraphQL */ `
         childrens {
           nextToken
         }
-        updatedAt
       }
       childrens {
         items {
@@ -63,7 +64,6 @@ export const getComment = /* GraphQL */ `
         }
         nextToken
       }
-      updatedAt
     }
   }
 `;
@@ -86,6 +86,7 @@ export const listComments = /* GraphQL */ `
         userIdLikes
         createdAt
         parentId
+        updatedAt
         parent {
           id
           ownerId
@@ -103,7 +104,6 @@ export const listComments = /* GraphQL */ `
         childrens {
           nextToken
         }
-        updatedAt
       }
       nextToken
     }
@@ -121,6 +121,7 @@ export const getChat = /* GraphQL */ `
       imageUrls
       createdAt
       parentId
+      updatedAt
       parent {
         id
         ownerId
@@ -131,6 +132,7 @@ export const getChat = /* GraphQL */ `
         imageUrls
         createdAt
         parentId
+        updatedAt
         parent {
           id
           ownerId
@@ -146,7 +148,6 @@ export const getChat = /* GraphQL */ `
         childrens {
           nextToken
         }
-        updatedAt
       }
       childrens {
         items {
@@ -163,7 +164,6 @@ export const getChat = /* GraphQL */ `
         }
         nextToken
       }
-      updatedAt
     }
   }
 `;
@@ -184,6 +184,7 @@ export const listChats = /* GraphQL */ `
         imageUrls
         createdAt
         parentId
+        updatedAt
         parent {
           id
           ownerId
@@ -199,7 +200,6 @@ export const listChats = /* GraphQL */ `
         childrens {
           nextToken
         }
-        updatedAt
       }
       nextToken
     }

@@ -48,7 +48,11 @@
               "userPoolId": "authprostyleeddf57d06"
             }
           },
-          "additionalAuthenticationProviders": []
+          "additionalAuthenticationProviders": [
+            {
+              "authenticationType": "API_KEY"
+            }
+          ]
         }
       }
     }

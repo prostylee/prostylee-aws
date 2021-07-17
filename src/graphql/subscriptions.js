@@ -15,6 +15,7 @@ export const onLikeComment = /* GraphQL */ `
       userIdLikes
       createdAt
       parentId
+      updatedAt
       parent {
         id
         ownerId
@@ -27,6 +28,7 @@ export const onLikeComment = /* GraphQL */ `
         userIdLikes
         createdAt
         parentId
+        updatedAt
         parent {
           id
           ownerId
@@ -44,7 +46,6 @@ export const onLikeComment = /* GraphQL */ `
         childrens {
           nextToken
         }
-        updatedAt
       }
       childrens {
         items {
@@ -63,7 +64,6 @@ export const onLikeComment = /* GraphQL */ `
         }
         nextToken
       }
-      updatedAt
     }
   }
 `;
@@ -81,6 +81,7 @@ export const onUnlikeComment = /* GraphQL */ `
       userIdLikes
       createdAt
       parentId
+      updatedAt
       parent {
         id
         ownerId
@@ -93,6 +94,7 @@ export const onUnlikeComment = /* GraphQL */ `
         userIdLikes
         createdAt
         parentId
+        updatedAt
         parent {
           id
           ownerId
@@ -110,7 +112,6 @@ export const onUnlikeComment = /* GraphQL */ `
         childrens {
           nextToken
         }
-        updatedAt
       }
       childrens {
         items {
@@ -129,7 +130,6 @@ export const onUnlikeComment = /* GraphQL */ `
         }
         nextToken
       }
-      updatedAt
     }
   }
 `;
@@ -147,6 +147,7 @@ export const onCreateComment = /* GraphQL */ `
       userIdLikes
       createdAt
       parentId
+      updatedAt
       parent {
         id
         ownerId
@@ -159,6 +160,7 @@ export const onCreateComment = /* GraphQL */ `
         userIdLikes
         createdAt
         parentId
+        updatedAt
         parent {
           id
           ownerId
@@ -176,7 +178,6 @@ export const onCreateComment = /* GraphQL */ `
         childrens {
           nextToken
         }
-        updatedAt
       }
       childrens {
         items {
@@ -195,7 +196,6 @@ export const onCreateComment = /* GraphQL */ `
         }
         nextToken
       }
-      updatedAt
     }
   }
 `;
@@ -213,6 +213,7 @@ export const onUpdateComment = /* GraphQL */ `
       userIdLikes
       createdAt
       parentId
+      updatedAt
       parent {
         id
         ownerId
@@ -225,6 +226,7 @@ export const onUpdateComment = /* GraphQL */ `
         userIdLikes
         createdAt
         parentId
+        updatedAt
         parent {
           id
           ownerId
@@ -242,7 +244,6 @@ export const onUpdateComment = /* GraphQL */ `
         childrens {
           nextToken
         }
-        updatedAt
       }
       childrens {
         items {
@@ -261,7 +262,6 @@ export const onUpdateComment = /* GraphQL */ `
         }
         nextToken
       }
-      updatedAt
     }
   }
 `;
@@ -279,6 +279,7 @@ export const onDeleteComment = /* GraphQL */ `
       userIdLikes
       createdAt
       parentId
+      updatedAt
       parent {
         id
         ownerId
@@ -291,6 +292,7 @@ export const onDeleteComment = /* GraphQL */ `
         userIdLikes
         createdAt
         parentId
+        updatedAt
         parent {
           id
           ownerId
@@ -308,7 +310,6 @@ export const onDeleteComment = /* GraphQL */ `
         childrens {
           nextToken
         }
-        updatedAt
       }
       childrens {
         items {
@@ -327,7 +328,6 @@ export const onDeleteComment = /* GraphQL */ `
         }
         nextToken
       }
-      updatedAt
     }
   }
 `;
@@ -343,6 +343,7 @@ export const onCreateChat = /* GraphQL */ `
       imageUrls
       createdAt
       parentId
+      updatedAt
       parent {
         id
         ownerId
@@ -353,6 +354,7 @@ export const onCreateChat = /* GraphQL */ `
         imageUrls
         createdAt
         parentId
+        updatedAt
         parent {
           id
           ownerId
@@ -368,7 +370,6 @@ export const onCreateChat = /* GraphQL */ `
         childrens {
           nextToken
         }
-        updatedAt
       }
       childrens {
         items {
@@ -385,7 +386,6 @@ export const onCreateChat = /* GraphQL */ `
         }
         nextToken
       }
-      updatedAt
     }
   }
 `;
@@ -401,6 +401,7 @@ export const onUpdateChat = /* GraphQL */ `
       imageUrls
       createdAt
       parentId
+      updatedAt
       parent {
         id
         ownerId
@@ -411,6 +412,7 @@ export const onUpdateChat = /* GraphQL */ `
         imageUrls
         createdAt
         parentId
+        updatedAt
         parent {
           id
           ownerId
@@ -426,7 +428,6 @@ export const onUpdateChat = /* GraphQL */ `
         childrens {
           nextToken
         }
-        updatedAt
       }
       childrens {
         items {
@@ -443,7 +444,6 @@ export const onUpdateChat = /* GraphQL */ `
         }
         nextToken
       }
-      updatedAt
     }
   }
 `;
@@ -459,6 +459,7 @@ export const onDeleteChat = /* GraphQL */ `
       imageUrls
       createdAt
       parentId
+      updatedAt
       parent {
         id
         ownerId
@@ -469,6 +470,7 @@ export const onDeleteChat = /* GraphQL */ `
         imageUrls
         createdAt
         parentId
+        updatedAt
         parent {
           id
           ownerId
@@ -484,7 +486,6 @@ export const onDeleteChat = /* GraphQL */ `
         childrens {
           nextToken
         }
-        updatedAt
       }
       childrens {
         items {
@@ -501,7 +502,6 @@ export const onDeleteChat = /* GraphQL */ `
         }
         nextToken
       }
-      updatedAt
     }
   }
 `;

@@ -1,7 +1,9 @@
+# https://aws.amazon.com/blogs/mobile/graphql-security-appsync-amplify/
 type Comment @model @auth(
     rules: [
       { allow: owner, operations: [create, delete, update] }
       { allow: private, operations: [read, update] }
+      { allow: public, provider: apiKey, operations: [read, create, delete, update] }
     ])
     @key(name: "ByParent", fields: ["parentId"]) {
    id: ID!
@@ -23,6 +25,7 @@ type Chat @model @auth(
     rules: [
       { allow: owner, operations: [create, delete, update] }
       { allow: private, operations: [read, update] }
+      { allow: public, provider: apiKey, operations: [read, create, delete, update] }
     ])
     @key(name: "ByParent", fields: ["parentId"]) {
    id: ID!
