@@ -1,0 +1,13 @@
+- hosts: prostylee
+  gather_facts: no
+#  vars_files:
+#    - aws-cred.yml
+  roles:
+    - kami911.java_open_jdk11
+  tasks:
+    - name: 'Check memory'
+      command: 'free -m'
+
+    - include: tasks/install-python-libs.yml
+
+    - include: tasks/mkdir.yml

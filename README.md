@@ -51,3 +51,12 @@ After first deployment, we need to manually update:
 # Image service handler
 
 Template file : AWS CloudFormation
+
+# Switch AWS Account
+
+- Remove file: amplify/team-provider-info.json
+- amplify configure
+- amplify init
+- amplify hosting add
+- Select Hosting with Amplify Console
+- amplify publish

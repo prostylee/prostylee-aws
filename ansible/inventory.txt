@@ -1,0 +1,5 @@
+[prostylee]
+backend ansible_host=3.37.47.64 ansible_connection=ssh ansible_user=ec2-user
+
+[localhost]
+localhost ansible_connection=local ansible_python_interpreter=python

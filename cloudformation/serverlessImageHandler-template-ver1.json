@@ -294,7 +294,7 @@
                 {
                   "Ref": "AWS::Region"
                 },
-                "ap-southeast-1"
+                "ap-northeast-2"
               ]
             },
             {

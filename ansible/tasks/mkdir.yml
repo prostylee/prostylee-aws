@@ -1,0 +1,2 @@
+- name: 'Execute a command to create a folder'
+  command: 'mkdir -p /var/www/app/prostylee-be'

@@ -68,7 +68,7 @@
         "Layers": [],
         "Timeout": "25",
         "Code": {
-          "S3Bucket": "amplify-prostylee-staging-224241-deployment",
+          "S3Bucket": "amplify-prostylee-staging-214808-deployment",
           "S3Key": "amplify-builds/customTokenGeneration-4e316f5937726b423559-build.zip"
         }
       }
